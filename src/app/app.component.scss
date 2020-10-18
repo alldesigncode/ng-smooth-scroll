@@ -1,0 +1,33 @@
+$colors: (
+  "blue": #394867,
+  "green": #28df99,
+  "yellow": #ffe05d,
+  "orange": #ff9642,
+  "red": #d7385e,
+  "grey": #9ba4b4,
+);
+
+.container {
+  font-family: helvetica;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 350px));
+  justify-content: center;
+  margin: 50px 0;
+
+  .box {
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  // $name - is the key in our $colors map that has to match with the class name that we assigned to html element
+  // $color - value of our $colors map
+  @each $name, $color in $colors {
+    .box.box-#{$name} {
+      background: $color;
+    }
+  }
+}

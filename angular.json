@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-smooth-scroll"
+    }
+  },
+  "defaultProject": "ng-smooth-scroll",
+  "cli": {
+    "analytics": false
+  }
 }
